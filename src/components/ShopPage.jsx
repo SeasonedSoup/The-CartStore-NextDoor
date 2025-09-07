@@ -1,3 +1,4 @@
+
 import { Nav } from "./Nav"
 import { Card } from "./Card"
 export function ShopPage() {
