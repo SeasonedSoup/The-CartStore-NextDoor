@@ -9,6 +9,7 @@ export function Card() {
                 <div className="price&amount">
                     <h2>Price</h2>
                     <h2>Product Amount</h2>
+                    <input className="productAmount" type="number" />
                 </div>
                 <button className="addToCart">Add To Cart</button>
             </div>

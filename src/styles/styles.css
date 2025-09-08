@@ -15,3 +15,7 @@ span.cartIndicator {
     display: flex;
     flex-direction: column;
 }
+
+.productAmount {
+    width: 40px;
+}

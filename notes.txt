@@ -8,3 +8,5 @@ fetch on fake store
   make add to cart functional eg adding just a counter to cart indicator for now and u can adjust later with putting an item on the cart via api useeffect 
   and useState
 
+  each card will probably need an individual useState for the amount we shall need map and keys after fetching the items 
+  prob main goal first is adding the items show up in shop using card inside a Cards div that is grid
