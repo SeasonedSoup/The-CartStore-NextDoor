@@ -1,2 +1,10 @@
 fetch on fake store
   --fetch('https://fakestoreapi.com/products')
+
+  use context or either make it global state on app and pass it make one parent instead of homepage being the parent
+
+  created card elements check
+
+  make add to cart functional eg adding just a counter to cart indicator for now and u can adjust later with putting an item on the cart via api useeffect 
+  and useState
+
