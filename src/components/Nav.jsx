@@ -6,7 +6,7 @@ export function Nav() {
         <nav>
             <NavLink to="/homepage">Home</NavLink>
             <NavLink to="/shoppage">Shop</NavLink>
-            <NavLink to="/cartpage">Cart <span className="cartIndicator">1</span></NavLink>
+            <NavLink to="/cartpage">Cart</NavLink>
         </nav>
     )
 }

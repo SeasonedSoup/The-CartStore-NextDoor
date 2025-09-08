@@ -4,3 +4,14 @@ span.cartIndicator {
     font-size: 22px;
     padding: 12px;
 }
+
+.card {
+    padding: 2rem;
+    background-color: whitesmoke;
+    max-width: 200px;
+}
+
+.innerCard {
+    display: flex;
+    flex-direction: column;
+}
