@@ -1,25 +1,28 @@
 import App from "./App";
 //This is where routes will be located
-import { CartPage } from "./components/CartPage";
-import { HomePage } from "./components/HomePage";
-import { ShopPage } from "./components/ShopPage";
+import { CartPage } from "./pages/CartPage";
+import { HomePage } from "./pages/HomePage";
+import { ShopPage } from "./pages/ShopPage";
 
 const routes = [
     {
         path: "/",
         element: <App/>,
-    },
-    {
-        path: "homepage",
-        element: <HomePage />
-    },
-    {
-        path: "shoppage",
-        element: <ShopPage />
-    },
-    {
-        path: "cartpage",
-        element: <CartPage />
+        children: [
+            {
+                index: true,
+                element: <HomePage />
+            },
+            {
+                path: "shoppage",
+                element: <ShopPage />
+            },
+
+            {
+                path: "cartpage",
+                element: <CartPage />
+            },
+        ]
     },
 ]
 
