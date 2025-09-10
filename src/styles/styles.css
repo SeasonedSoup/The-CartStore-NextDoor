@@ -33,3 +33,14 @@ nav > * {
 .productAmount {
     width: 40px;
 }
+
+.indicator {
+    color: red;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+}
