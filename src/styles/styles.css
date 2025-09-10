@@ -7,9 +7,10 @@ span.cartIndicator {
 
 nav {
     background-color: black;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 65px;
 }
 
@@ -43,4 +44,8 @@ nav > * {
     height: 30px;
     text-align: center;
     line-height: 26px;
+}
+
+.logo {
+    margin-right: auto;
 }
