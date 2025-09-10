@@ -1,6 +1,11 @@
 fetch on fake store
   --fetch('https://fakestoreapi.com/products')
 
+example:
+  fetch('https://fakestoreapi.com/products')
+  .then(response => response.json())
+  .then(data => console.log(data));
+  
   use context or either make it global state on app and pass it make one parent instead of homepage being the parent
 
   created card elements check

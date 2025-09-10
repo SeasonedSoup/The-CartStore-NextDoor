@@ -23,16 +23,13 @@ nav > * {
 .card {
     padding: 2rem;
     background-color: whitesmoke;
-    max-width: 200px;
+    max-width: 20rem;
+    min-height:25rem;
 }
 
 .innerCard {
     display: flex;
     flex-direction: column;
-}
-
-.productAmount {
-    width: 40px;
 }
 
 .indicator {
