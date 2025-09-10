@@ -6,6 +6,9 @@
             <div className="items">
                 <h1> Item: Quantity Increase and Decrease Quantity Price</h1>
             </div>
+            <div className="checkout">
+                <button>Check Out!</button>
+            </div>
         </>
     )
  }

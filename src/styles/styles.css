@@ -5,6 +5,20 @@ span.cartIndicator {
     padding: 12px;
 }
 
+nav {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 65px;
+}
+
+nav > * {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
 .card {
     padding: 2rem;
     background-color: whitesmoke;

@@ -1,7 +1,7 @@
 import "../styles/styles.css"
 import { NavLink } from "react-router-dom";
 
-export function Navbar() {
+export function Navbar({}) {
     return (
         <nav>
             <NavLink to="/"> Home</NavLink>
