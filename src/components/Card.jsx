@@ -1,10 +1,10 @@
 //a card for each item in the store skeleton first
-export function Card() {
+export function Card({item}) {
     return (
         <div className="card">
             <div className="innerCard">
-                <img src="#" alt="CoolStuff" />
-                <h3>Product Name</h3>
+                <img src={item.image} alt="CoolStuff" />
+                <h3>{item.title}</h3>
                 <h3>Product Description</h3>
                 <div className="price&amount">
                     <h2>Price</h2>
