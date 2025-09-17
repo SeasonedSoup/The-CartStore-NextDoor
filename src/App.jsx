@@ -17,12 +17,10 @@ function App() {
     fetchItems()
   }, [])
 
-  console.log(cart)
-
   return (
     <>
       <Navbar />
-      <Outlet context={[cart, setCart]}/>
+      <Outlet context={[products, setCart]}/>
     </>
   )
 }

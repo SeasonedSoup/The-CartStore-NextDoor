@@ -2,7 +2,7 @@ import { Card } from "../components/Card"
 import { useOutletContext } from "react-router-dom"
 
 export function ShopPage() {
-    const [cart, setCart] = useOutletContext();
+    const [products, setCart] = useOutletContext();
     //Currently unused set cart might need two products which are untouched and cart which is the actual persons stuff that has been added to cart
 
     return (
@@ -12,8 +12,8 @@ export function ShopPage() {
             <label htmlFor="search">Search: </label>
             <input type="search" id="search" name="search" />
             <div className="itemGrid">
-                {cart.map((item) => {
-                    return <Card key={item.id} item={item} ></Card>
+                {products.map((item) => {
+                    return <Card key={item.id} item={item} setCart={setCart}></Card>
                 })}
             </div>
         </>
