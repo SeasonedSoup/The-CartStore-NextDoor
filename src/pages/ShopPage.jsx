@@ -2,7 +2,7 @@ import { Card } from "../components/Card"
 import { useOutletContext } from "react-router-dom"
 
 export function ShopPage() {
-    const [products, setCart] = useOutletContext();
+    const {products, setCart} = useOutletContext();
     //Currently unused set cart might need two products which are untouched and cart which is the actual persons stuff that has been added to cart
 
     return (

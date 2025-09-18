@@ -3,7 +3,7 @@
  
  export function CartPage() {
 
-    const [cart, setCart] = useOutletContext();
+    const {cart, setCart} = useOutletContext();
     console.log(cart)
     return (
         <>
