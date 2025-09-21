@@ -15,7 +15,7 @@ export function Card({item , setCart}) {
     return (
         <div className="card">
             <div className="innerCard">
-                <img src={item.image} alt="CoolStuff" />
+                <img src={item.image} alt="CoolStuff" className="itemImgs" />
                 <h3>{item.title}</h3>
                 <h3>Product Description</h3>
                 <div className="price&amount">

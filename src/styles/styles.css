@@ -20,12 +20,7 @@ nav > * {
     font-size: 2rem;
 }
 
-.card {
-    padding: 2rem;
-    background-color: whitesmoke;
-    max-width: 20rem;
-    min-height:25rem;
-}
+
 
 .innerCard {
     display: flex;
@@ -47,13 +42,6 @@ nav > * {
     margin-right: auto;
 }
 
-.itemGrid {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(200px, 1fr));
-    gap: 12px;
-    column-gap: 22px;
-}
-
 .homePage {
     text-align: center;
 }
@@ -66,3 +54,32 @@ nav > * {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-inline: auto;
 }
+/* Shop */
+
+.itemGrid {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;  
+    background: #817a7a;  
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+
+.card {
+    background: #e6dbdb;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
