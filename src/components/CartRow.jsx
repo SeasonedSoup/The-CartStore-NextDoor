@@ -1,5 +1,5 @@
 
-export function CartRow({item}) {
+export function CartRow({item, deleteHandler}) {
     return (
         <div className="cartItem">
             <img src={item.image} alt="image of the specified item" />
@@ -7,7 +7,7 @@ export function CartRow({item}) {
             <div className="rightMost">
                 <h4>${item.price}</h4>
                 <h4>Quantity: {item.quantity}</h4>
-                <button>Remove Item</button>
+                <button onClick={() => deleteHandler(item.id)}>Remove Item</button>
             </div>
         </div>
     )

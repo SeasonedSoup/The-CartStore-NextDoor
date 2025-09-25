@@ -14,15 +14,18 @@ import { CartRow } from "../components/CartRow";
         alert("Thanks for buying everything!")
         setCart([])
     }
+
+    function deleteItem(id) {
+        const newCart = cart.filter(item => item.id !== id)
+        setCart(newCart)
+    }
+
     console.log(cart)
     return (
-        <>
+        <div className="cartPage">
             <h1>Cart</h1>
-            <div className="items">
-                <h1> Item: Quantity Increase and Decrease Quantity Price</h1>
-            </div>
             {cart.map(item => (
-                <CartRow key={item.id} item={item}></CartRow>
+                <CartRow key={item.id} item={item} deleteHandler={deleteItem}></CartRow>
             ))}
             {cart.length === 0 && <h1>Your cart is currently empty!</h1> }
             {cart.length > 0 &&
@@ -30,6 +33,6 @@ import { CartRow } from "../components/CartRow";
                 <button onClick={buyEverything}>Check Out!</button>
                 </div>
             }
-        </>
+        </div>
     )
  }
