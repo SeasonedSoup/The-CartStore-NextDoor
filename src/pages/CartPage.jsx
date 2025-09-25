@@ -1,4 +1,4 @@
-
+import { CartRow } from "../components/CartRow";
  import { useOutletContext } from "react-router"
  
  export function CartPage() {
@@ -22,16 +22,14 @@
                 <h1> Item: Quantity Increase and Decrease Quantity Price</h1>
             </div>
             {cart.map(item => (
-                <div className="cartItem">
-                <img src={item.image} alt="image of the specified item" />
-                <h4>{item.title}</h4>
-                <h4>Quantity: {item.quantity}</h4>
-                <h4>${item.price}</h4>
-                </div>
+                <CartRow key={item.id} item={item}></CartRow>
             ))}
-            <div className="checkout">
+            {cart.length === 0 && <h1>Your cart is currently empty!</h1> }
+            {cart.length > 0 &&
+                <div className="checkout">
                 <button onClick={buyEverything}>Check Out!</button>
-            </div>
+                </div>
+            }
         </>
     )
  }
