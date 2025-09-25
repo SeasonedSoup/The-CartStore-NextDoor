@@ -4,13 +4,21 @@ import { useState } from "react"
 export function Card({item , setCart}) {
 
     const [quantity, setQuantity] = useState(1)
-
+    // sets cart if it finds an item equal to the item map over again where quantity will be 
     const addToCart = (item, quantity) => {
         setCart((prev) => {
-            // finding an existing item test const addedToCart = prev.find()
+            const exists = prev.find(curItem => curItem.id === item.id);
+
+            //if item exists just adds to the quantity of that item removing repeats
+            if (exists) {
+                return prev.map(curItem => {
+                    return curItem.id === item.id ? 
+                    {...curItem, quantity: curItem.quantity + quantity} : curItem
+                })
+            }
+            //returns the new item with the quantity added
             return [...prev, {...item, quantity: quantity}]
         })
-        console.log("Successfully Added to Cart!")
     }
     return (
         <div className="card">

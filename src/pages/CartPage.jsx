@@ -24,8 +24,9 @@
             {cart.map(item => (
                 <div className="cartItem">
                 <img src={item.image} alt="image of the specified item" />
-                <h1 key={item.id}>{item.title}{item.quantity}</h1>
-                <h2 key={item.id}>${item.price}</h2>
+                <h4>{item.title}</h4>
+                <h4>Quantity: {item.quantity}</h4>
+                <h4>${item.price}</h4>
                 </div>
             ))}
             <div className="checkout">
