@@ -19,9 +19,9 @@ export function Card({item , setCart}) {
                 <h3>{item.title}</h3>
                 <h3>Product Description</h3>
                 <div className="price&amount">
-                    <h2>Price</h2>
+                    <h2>Price ${item.price}</h2>
                     <h2>Product Amount {quantity} </h2>
-                    <input className="productAmount" type="number" onChange={(e) => setQuantity(Number(e.target.value))}/>
+                    <input value={quantity} className="productAmount" type="number" onChange={(e) => setQuantity(Number(e.target.value))}/>
                 </div>
                 <button className="addToCart" onClick={() => addToCart(item, quantity)}>Add To Cart</button>
             </div>

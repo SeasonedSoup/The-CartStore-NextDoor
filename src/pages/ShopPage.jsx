@@ -6,8 +6,8 @@ export function ShopPage() {
     //Currently unused set cart might need two products which are untouched and cart which is the actual persons stuff that has been added to cart
 
     return (
-        <>
-            <h1>Hello Shop Page is Currently a WORK IN PROGRESS!</h1>
+        <div className="shopPage">
+            <h1>Shop</h1>
             <h2> This is where to browse items and add them to your cart!</h2>
             <label htmlFor="search">Search: </label>
             <input type="search" id="search" name="search" />
@@ -16,6 +16,6 @@ export function ShopPage() {
                     return <Card key={item.id} item={item} setCart={setCart}></Card>
                 })}
             </div>
-        </>
+        </div>
     )
 }
