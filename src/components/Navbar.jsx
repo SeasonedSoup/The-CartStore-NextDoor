@@ -1,6 +1,6 @@
 import "../styles/styles.css"
 import { NavLink } from "react-router-dom";
-
+import {PropTypes} from "prop-types"
 export function Navbar({cart}) {
 
     const cartAmount = cart.length
@@ -15,4 +15,8 @@ export function Navbar({cart}) {
             </NavLink>
         </nav>
     )
+}
+
+Navbar.PropTypes = {
+    cart: PropTypes.object.isRequired
 }

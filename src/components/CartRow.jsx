@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 
 export function CartRow({item, deleteHandler}) {
     return (
@@ -11,4 +12,9 @@ export function CartRow({item, deleteHandler}) {
             </div>
         </div>
     )
+}
+
+CartRow.PropTypes = {
+    item: PropTypes.object.isRequired,
+    deleteHandler: PropTypes.func.isRequired
 }

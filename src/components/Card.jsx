@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { PropTypes } from "prop-types"
 //a card for each item in the store skeleton first
 export function Card({item , setCart}) {
 
@@ -35,4 +35,9 @@ export function Card({item , setCart}) {
             </div>
         </div>
     )
+}
+
+Card.PropTypes = {
+    item: PropTypes.object.isRequired,
+    setCart: PropTypes.func.isRequired
 }
