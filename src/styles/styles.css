@@ -166,3 +166,12 @@ nav > * {
     border-radius: 8px;
 }
 
+button.increment, button.decrement {
+    font-weight: bold;
+    font-size: 30px;
+    width: 50px;
+    color: white;
+    background-color: #817a7a;
+    cursor: pointer;
+    border-radius: 12px;
+}

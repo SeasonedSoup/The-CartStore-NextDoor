@@ -1,5 +1,5 @@
 import { CartRow } from "../components/CartRow";
- import { useOutletContext } from "react-router"
+ import { useOutletContext } from "react-router-dom"
  
  export function CartPage() {
 
@@ -20,12 +20,23 @@ import { CartRow } from "../components/CartRow";
         setCart(newCart)
     }
 
+    function increaseItem(id) {
+        const newCart = cart.map(item => item.id === id ? {...item, quantity: item.quantity + 1} : item
+        );
+        setCart(newCart)
+    }
+
+    function decreaseItem(id) {
+        const newCart = cart.map(item => item.id === id ? {...item, quantity: Math.max(0, item.quantity - 1)} : item)
+        setCart(newCart)
+    }
+
     console.log(cart)
     return (
         <div className="cartPage">
             <h1>Cart</h1>
             {cart.map(item => (
-                <CartRow key={item.id} item={item} deleteHandler={deleteItem}></CartRow>
+                <CartRow key={item.id} item={item} deleteHandler={deleteItem} increaseHandler={increaseItem} decreaseHandler={decreaseItem}></CartRow>
             ))}
             {cart.length === 0 && <h1>Your cart is currently empty!</h1> }
             {cart.length > 0 &&
