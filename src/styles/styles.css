@@ -21,12 +21,6 @@ nav > * {
 }
 
 
-
-.innerCard {
-    display: flex;
-    flex-direction: column;
-}
-
 .indicator {
     color: red;
     display: inline-block;
@@ -80,6 +74,12 @@ nav > * {
     margin-bottom: 1rem;
   }
 
+  .innerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
 
 .card {
     background: #e6dbdb;
@@ -92,6 +92,17 @@ nav > * {
     width: 350px;
     box-shadow: 2px 4px 8px 0px rgba(0,0,0,0.1);
   }
+
+
+button.addToCart {
+    padding: 12px;
+    width: 120px;
+    display: block;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
 
 /* Home */
 
@@ -174,4 +185,13 @@ button.increment, button.decrement {
     background-color: #817a7a;
     cursor: pointer;
     border-radius: 12px;
+}
+
+.removeButton {
+    background-color: rgb(204, 30, 30);
+    color: white;
+    padding: 12px;
+    border: solid 2px white;
+    border-radius: 8px;
+    cursor: pointer;
 }

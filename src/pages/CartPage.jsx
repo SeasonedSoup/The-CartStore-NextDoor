@@ -31,7 +31,6 @@ import { CartRow } from "../components/CartRow";
         setCart(newCart)
     }
 
-    console.log(cart)
     return (
         <div className="cartPage">
             <h1>Cart</h1>
@@ -40,9 +39,12 @@ import { CartRow } from "../components/CartRow";
             ))}
             {cart.length === 0 && <h1>Your cart is currently empty!</h1> }
             {cart.length > 0 &&
-                <div className="checkout">
-                <button onClick={buyEverything}>Check Out!</button>
-                </div>
+                <>
+                    <h1>Total Price: $ {cart.reduce((acc, cartItem) => { return acc + cartItem.price * cartItem.quantity} ,0 )} </h1>
+                    <div className="checkout">
+                        <button onClick={buyEverything}>Check Out!</button>
+                    </div>
+                </>
             }
         </div>
     )
